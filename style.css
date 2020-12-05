@@ -52,15 +52,7 @@ body {
   }
 
 
-  .avatar-xl {
-    height: 6rem;
-    width: 6rem;
-  }
-  
-  .rounded-circle {
-    border-radius: 50% !important;
-  }
-  
+
   .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: #fff;
     background-color: #1abc9c;
