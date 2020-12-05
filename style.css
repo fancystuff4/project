@@ -24,6 +24,18 @@ body {
     margin-right: 5rem;
   }
 
+  .card-boxz {
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #e7eaed;
+    padding: 1.5rem;
+    margin-bottom: 24px;
+    border-radius: 0.25rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+  }
+
+
   .avatar-xl {
     height: 6rem;
     width: 6rem;
@@ -299,4 +311,34 @@ body {
 
 .a{
 padding-left: 1rem;
+}
+
+
+table, td, th {
+    border: 1px solid black;
+  }
+  
+  table {
+    border-collapse: collapse;
+    text-align: left;
+  }
+  h5{
+    text-align: left;
+  }
+
+ol.e {list-style-type: cjk-ideographic;}
+
+.nid{
+  text-align: center;
+}
+#t01 tr:nth-child(even) {
+  background-color: #fff;
+}
+#t01 tr:nth-child(odd) {
+ 
+ background-color:  #f5f6f8;
+}
+#t01 th {
+  background-color: black;
+  color: white;
 }
