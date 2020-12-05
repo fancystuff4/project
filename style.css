@@ -290,3 +290,11 @@ body {
       margin-bottom: 10px;
     }
   }
+
+  li.a::marker{
+    content: "⮚";/* Insert content that looks like bullets */
+    }
+
+.a{
+padding-left: 1rem;
+}
