@@ -16,6 +16,7 @@ body {
     background-color: red;
     margin: 1px;
     padding: 1px;
+    text-align: center;
   }
   
   .card-box {
@@ -27,6 +28,7 @@ body {
     border-radius: 0.25rem;
     margin-left: 12rem;
     margin-right: 12rem;
+    text-align: center;
   }
   
   .card-boxx {
