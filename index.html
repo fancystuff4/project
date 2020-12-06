@@ -300,14 +300,32 @@
                                         <div>
                                             <div ><img src="images/devops2.jpg" style="width: 85%; height: 80%; margin-left: 2.5rem;" alt="profile-image"></div>
                                             <ol style="margin: 0.5rem; padding-inline: 1rem; padding: 0.5rem;">
-                                                <li class="e">
+                                                <li class="e">Step
+                                                    <ul style="list-style: none;padding: 0;margin: 0;list-style-position: outside;"  >
+                                                        <li class="a">Configure 5 Linux Ec2 instance for jenkins, Jfrog Artifactory, SonarQube, Ansible/Docker & Kubernetes(kops).</li> 
+                                                        <li class="a">Install Jenkins, Maven & Java in instance, Start Jenkins service.</li> 
+                                                        <li class="a">Install Jfrog Artifactory and SonarQube in different instances.<li> 
+                                                        <li class="a">Install Ansible & Docker in one instance and kubernetes in other instance create user and password with sudo privillege and allow ssh access.<li> 
+                                                    </ul> 
+                                                </li>
+                                                <li class="e">Step
+                                            
+                                                        <ul style="list-style: none;padding: 0;margin: 0;list-style-position: outside;"  >
+                                                            <li class="a">Add user name password & host id of all the instances.</li> 
+                                                            <li class="a">Then we can select maven or ci/cd pipeline project.</li> 
+                                                            <li class="a">Then add git url, user name & password , specify the path of pom.xml & goals to build jar or war file.<li> 
+                                                            <li class="a">Write playbook & Dockerfile to create docker image which copy or include war or jar file.<li> 
+                                                        </ul> 
+                                                  
 
                                                 </li>
-                                                <li class="e">
-
-                                                </li>
-                                                <li class="e">
-
+                                                <li class="e">Step
+                                                    <ul style="list-style: none;padding: 0;margin: 0;list-style-position: outside;"  >
+                                                        <li class="a">Deploy jar or war file on Ansible/Docker server & then run playbook & Dockerfile to create container and push to dockerhub.</li> 
+                                                        <li class="a">Write a yaml file to deploy container kubernetes server.</li> 
+                                                        <li class="a">Deploy the file on kubernetes server and then run the file to create cluster.<li> 
+                                                        <li style="margin-left: 2rem;">(try to access the application from browser)<li> 
+                                                    </ul> 
                                                 </li>
                                             </ol>
                                             
