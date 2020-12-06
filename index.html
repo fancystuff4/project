@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>about me profile</title>
+    <title>Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
     <!-- add style css -->
     <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
 </head>
 <body>
 <div class="container">
@@ -121,6 +126,42 @@
 
 
 
+
+
+
+
+    <h2 class="w3-center">Manual Slideshow</h2>
+
+    <div class="w3-content w3-display-container" style="margin-bottom:2rem;">
+      <img class="mySlides" src="images/python.jpg" style="width:100%; height: 85%;">
+      <img class="mySlides" src="images/devopscicd1.jpg" style="width:100%; height: 90%;">
+      <img class="mySlides" src="images/kubernetes.jpg" style="width:100%; height: 85%;">
+      <img class="mySlides" src="images/fullStrackWebDevelopment.jpg" style="width:100%; height: 90%;">
+      <img class="mySlides" src="images/nodejs.jpg" style="width:100%; height: 85%;">
+    
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
 
 
 
@@ -287,7 +328,7 @@
                                                         <li class="a">create Elastic Load Balancer with public subnet.</li> 
                                                         <li class="a">create launch configuration & autoscaling when ever instance scale up it will send notification to subscribe emails.</li> 
                                                         <li class="a">create a cloud watch with event type ec2 instance state-change Notifucation . when ever instance state changes it will send notification to subscribe emails. <li> 
-                                                        <li style="margin-left: 1rem;">( try to acccess website from browser & it should work). </li>
+                                                        <li style="margin-left: 1rem;">( try to access website from browser & it should work). </li>
                                                     </ul> 
 
                                                 </li>
