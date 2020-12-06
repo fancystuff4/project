@@ -240,15 +240,55 @@
                                 <ul style="list-style: none;padding: 0;margin: 0;list-style-position: outside;"  >
                                     <li class="a"><h5 class="mb-3 mt-4 text-uppercase">aws mega project</li></h5>
                                         <div>
-                                            <div ><img src="images/awsproject1..png" style="width: 80%; height: 80%;" alt="profile-image"></div>
-                                            <ol style="margin: 2rem; padding-inline: 1rem; padding: 1rem;">
-                                                <li class="e">
+                                            <div ><img src="images/latestaws.jpg" style="width: 95%; height: 60%;" alt="profile-image"></div>
+                                            <div><b>Services used :</b> vpc, Ec2, RDS, IAM, Route53, AMI, S3, ELB, Autoscaling, SNS, Cloud watch</div>
+                                            <ol style="margin: 0.5rem; padding-inline: 1rem; padding: 0.5rem;">
+                                                <li class="e">Step 
+                                                    <ul style="list-style: none;padding: 0;margin: 0;list-style-position: outside;"  >
+                                                        <li class="a">create vpc , public & private subnets, Internet Gateway, NAT Gateway, Route Table and etc.</li>
+                                                        <li class="a">create Ec2 instance with below userdata/bootstrapping script.</li>
+                                                            <ul>
+                                                           <li> #!/bin/bash</li>
+                                                           <li>yum update -y </li> 
+                                                            <li>yum install httpd -y </li> 
+                                                            <li>service httpd start</li> 
+                                                            <li>chkconfig httpd start</li> 
+                                                            <li>yum unstall wget -y </li> 
+                                                            <li>yum install php php-mysql mysql -y</li> 
+                                                            </ul>
+                                                        </li>
+                                                        <li class="a">create RDS security group with port 3306 & RDS subnet group with private subnet with username ,dbname & password.</li>
+                                                        <li style="margin-left: 1rem;">( accessed RDS instance from Ec2 instance. )</li>
+                                                    </ul>
 
                                                 </li>
-                                                <li class="e">
+                                                <li class="e">Step
+                                                    <ul style="list-style: none;padding: 0;margin: 0;list-style-position: outside;"  >
+                                                        <li class="a">install wordpress in /var/www/html directory.</li> 
+                                                        <li class="a">give permission to apache user on html directory ( chown -R apache:apache /var/www/html ).</li> 
+                                                        <li class="a"> access wordpress by ip address from browser and configer RDS details ( dbname, username, password, RDS url)<li> 
+                                                         
+                                                    </ul>      
+                                                </li>
+                                                <li class="e">Step
+                                                    <ul style="list-style: none;padding: 0;margin: 0;list-style-position: outside;"  >
+                                                        <li class="a">create new IAM role with S3 full access policy & S3 bucket.</li> 
+                                                        <li class="a">create SNS topic & subsribe it with admin email .</li> 
+                                                        <li class="a">assign IAM role to Ec2 instance and try to access S3 from Ec2 instance.<li> 
+                                                        <li class="a">create Route53 public hosted zone to map with domain , attach Route53 with ip address & update the record set of godady with aws Route53 record set.<li>
+                                                        <li class="a">cerate AMI (amazon machine image) from running or wordpress instance.<li>
+                                                        <li style="margin-left: 1rem;">( access application with domain name )</li>
+                                                         
+                                                    </ul> 
 
                                                 </li>
-                                                <li class="e">
+                                                <li class="e">Step
+                                                    <ul style="list-style: none;padding: 0;margin: 0;list-style-position: outside;"  >
+                                                        <li class="a">create Elastic Load Balancer with public subnet.</li> 
+                                                        <li class="a">create launch configuration & autoscaling when ever instance scale up it will send notification to subscribe emails.</li> 
+                                                        <li class="a">create a cloud watch with event type ec2 instance state-change Notifucation . when ever instance state changes it will send notification to subscribe emails. <li> 
+                                                        <li style="margin-left: 1rem;">( try to acccess website from browser & it should work). </li>
+                                                    </ul> 
 
                                                 </li>
                                             </ol>
